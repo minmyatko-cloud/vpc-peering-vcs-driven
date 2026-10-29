@@ -67,6 +67,6 @@ variable "backend_private_subnet_cidr" {
 
 variable "be_instance_type" {
   description = "Specifies the AWS instance type."
-  default     = "t3.small"
+  default     = "t3.micro"
 }
 
