@@ -21,7 +21,7 @@ variable "frontend_environment" {
 }
 
 ##############################################################
-# Frontend Organizaiton Name and Workspace Name Variables
+# Frontend Organizaiton Name and Workspace Name Variabless
 ##############################################################
 
 
@@ -42,7 +42,7 @@ variable "frontend_security_workspace" {
 
 variable "allow_ip_from_public_users" {
   description = "The workspace for the frontend security resources."
-  default     = "0.0.0.0/0"
+  default     = "161.142.142.210/32"
 }
 
 
