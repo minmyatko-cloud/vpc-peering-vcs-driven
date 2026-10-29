@@ -6,6 +6,7 @@ terraform {
     organization = "minmyatko"
 
     workspaces {
+      project = "vpc-peering-intra-vcs-driven"
       name = "fe-compute-ws"
     }
   }
