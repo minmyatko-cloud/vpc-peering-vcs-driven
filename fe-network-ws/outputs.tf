@@ -52,5 +52,3 @@ output "frontend_private_subnets_cidr_blocks" {
     private_subnet_3 = aws_subnet.frontend_private_subnet01.cidr_block
   }
 }
-
-
