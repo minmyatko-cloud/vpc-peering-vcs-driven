@@ -45,5 +45,13 @@ output "backend_private_routetable03_id" {
   value       = aws_route_table.backend_private_rtb03.id
 }
 
+output "backend_private_subnets_cidr_blocks" {
+  value = {
+    private_subnet_1 = aws_subnet.backend_private_subnet01.cidr_block
+    private_subnet_2 = aws_subnet.backend_private_subnet02.cidr_block
+    private_subnet_3 = aws_subnet.backend_private_subnet01.cidr_block
+  }
+}
+
 
 
