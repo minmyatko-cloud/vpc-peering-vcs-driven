@@ -6,7 +6,7 @@ terraform {
     organization = "minmyatko"
 
     workspaces {
-      name = "fe-security-ws-vcs"
+      name = "fe-security-ws"
     }
   }
 }
