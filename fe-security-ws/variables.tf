@@ -40,10 +40,11 @@ variable "frontend_security_workspace" {
   default     = "fe-security-ws"
 }
 
+variable "allow_ip_from_public_users" {
+  description = "The workspace for the frontend security resources."
+  default     = "0.0.0.0/0"
+}
 
-# variable "be_security_group_id" {
-#   description = "prviate_sg_02_id and private_sg_03_id from backend"
-#   default     = ["sg-0b0cbcd32c51b8c3d","sg-0e7284fc9e951e63f"]
-# }
+
 
 
