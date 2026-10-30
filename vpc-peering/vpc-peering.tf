@@ -88,7 +88,7 @@ resource "aws_vpc_security_group_ingress_rule" "fe_private_sg03_allow_icmp_from_
 
 resource "aws_vpc_security_group_egress_rule" "fe_private_sg03_allow_ssh_to_be_private_instance_03" {
   security_group_id            = data.tfe_outputs.fe_security_ws.nonsensitive_values.frontend_private_sg03_id
-  cidr_ipv4                    = "${data.tfe_outputs.be_compute_ws.nonsensitive_values.be_private_instance_ips["instance_03"]/32}"
+  cidr_ipv4                    = "${data.tfe_outputs.be_compute_ws.nonsensitive_values.be_private_instance_ips["instance_03"]}/32"
   from_port                    = 22
   ip_protocol                  = "tcp"
   to_port                      = 22
