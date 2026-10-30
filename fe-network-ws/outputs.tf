@@ -53,4 +53,3 @@ output "frontend_private_subnets_cidr_blocks" {
   }
 }
 
-
