@@ -8,11 +8,11 @@ resource "tfe_workspace_run" "fe_network" {
     message        = "Initial apply: Frontend Network"
   }
 
-  # destroy {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Destroy: Frontend Network"
-  # }
+  destroy {
+    manual_confirm = false
+    wait_for_run   = true
+    message        = "Destroy: Frontend Network"
+  }
 }
 
 # 2. Frontend Security
@@ -26,11 +26,11 @@ resource "tfe_workspace_run" "fe_security" {
     message        = "Initial apply: Frontend Security"
   }
 
-  # destroy {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Destroy: Frontend Security"
-  # }
+  destroy {
+    manual_confirm = false
+    wait_for_run   = true
+    message        = "Destroy: Frontend Security"
+  }
 }
 
 # 3. Frontend Compute
@@ -64,11 +64,11 @@ resource "tfe_workspace_run" "be_network" {
     message        = "Initial apply: Backend Network"
   }
 
-  # destroy {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Destroy: Backend Network"
-  # }
+  destroy {
+    manual_confirm = false
+    wait_for_run   = true
+    message        = "Destroy: Backend Network"
+  }
 }
 
 # 5. Backend Security
@@ -83,11 +83,11 @@ resource "tfe_workspace_run" "be_security" {
     message        = "Initial apply: Backend Security"
   }
 
-  # destroy {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Destroy: Backend Security"
-  # }
+  destroy {
+    manual_confirm = false
+    wait_for_run   = true
+    message        = "Destroy: Backend Security"
+  }
 }
 
 # 6. Backend Compute
@@ -102,11 +102,11 @@ resource "tfe_workspace_run" "be_compute" {
     message        = "Initial apply: Backend Compute"
   }
 
-  # destroy {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Destroy: Backend Compute"
-  # }
+  destroy {
+    manual_confirm = false
+    wait_for_run   = true
+    message        = "Destroy: Backend Compute"
+  }
 }
 
 # 7. VPC Peering
@@ -121,9 +121,9 @@ resource "tfe_workspace_run" "vpc_peering" {
     message        = "Initial apply: VPC Peering"
   }
 
-  # destroy {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Destroy: VPC Peering"
-  # }
+  destroy {
+    manual_confirm = false
+    wait_for_run   = true
+    message        = "Destroy: VPC Peering"
+  }
 }
