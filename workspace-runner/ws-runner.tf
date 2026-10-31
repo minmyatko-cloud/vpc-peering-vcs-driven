@@ -2,17 +2,17 @@
 resource "tfe_workspace_run" "fe_network" {
   workspace_id = data.tfe_workspace.target["fe_network"].id
 
-  # apply {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Initial apply: Frontend Network"
-  # }
-
-  destroy {
+  apply {
     manual_confirm = false
     wait_for_run   = true
-    message        = "Destroy: Frontend Network"
+    message        = "Initial apply: Frontend Network"
   }
+
+  # destroy {
+  #   manual_confirm = false
+  #   wait_for_run   = true
+  #   message        = "Destroy: Frontend Network"
+  # }
 }
 
 # 2. Frontend Security
@@ -20,17 +20,17 @@ resource "tfe_workspace_run" "fe_security" {
   workspace_id = data.tfe_workspace.target["fe_security"].id
   depends_on = [tfe_workspace_run.fe_network]
 
-  # apply {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Initial apply: Frontend Security"
-  # }
-
-  destroy {
+  apply {
     manual_confirm = false
     wait_for_run   = true
-    message        = "Destroy: Frontend Security"
+    message        = "Initial apply: Frontend Security"
   }
+
+  # destroy {
+  #   manual_confirm = false
+  #   wait_for_run   = true
+  #   message        = "Destroy: Frontend Security"
+  # }
 }
 
 # 3. Frontend Compute
@@ -39,11 +39,11 @@ resource "tfe_workspace_run" "fe_compute" {
 
   depends_on = [tfe_workspace_run.fe_security]
 
-  # apply {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Initial apply: Frontend Compute"
-  # }
+   apply {
+    manual_confirm = false
+    wait_for_run   = true
+    message        = "Initial apply: Frontend Compute"
+  }
 
   destroy {
     manual_confirm = false
@@ -58,17 +58,17 @@ resource "tfe_workspace_run" "be_network" {
 
   depends_on = [tfe_workspace_run.fe_compute]
 
-  # apply {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Initial apply: Backend Network"
-  # }
-
-  destroy {
+  apply {
     manual_confirm = false
     wait_for_run   = true
-    message        = "Destroy: Backend Network"
+    message        = "Initial apply: Backend Network"
   }
+
+  # destroy {
+  #   manual_confirm = false
+  #   wait_for_run   = true
+  #   message        = "Destroy: Backend Network"
+  # }
 }
 
 # 5. Backend Security
@@ -77,17 +77,17 @@ resource "tfe_workspace_run" "be_security" {
 
   depends_on = [tfe_workspace_run.be_network]
 
-  # apply {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Initial apply: Backend Security"
-  # }
-
-  destroy {
+  apply {
     manual_confirm = false
     wait_for_run   = true
-    message        = "Destroy: Backend Security"
+    message        = "Initial apply: Backend Security"
   }
+
+  # destroy {
+  #   manual_confirm = false
+  #   wait_for_run   = true
+  #   message        = "Destroy: Backend Security"
+  # }
 }
 
 # 6. Backend Compute
@@ -96,17 +96,17 @@ resource "tfe_workspace_run" "be_compute" {
 
   depends_on = [tfe_workspace_run.be_security]
 
-  # apply {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Initial apply: Backend Compute"
-  # }
-
-  destroy {
+  apply {
     manual_confirm = false
     wait_for_run   = true
-    message        = "Destroy: Backend Compute"
+    message        = "Initial apply: Backend Compute"
   }
+
+  # destroy {
+  #   manual_confirm = false
+  #   wait_for_run   = true
+  #   message        = "Destroy: Backend Compute"
+  # }
 }
 
 # 7. VPC Peering
@@ -115,15 +115,15 @@ resource "tfe_workspace_run" "vpc_peering" {
 
   depends_on = [tfe_workspace_run.be_compute]
 
-  # apply {
-  #   manual_confirm = false
-  #   wait_for_run   = true
-  #   message        = "Initial apply: VPC Peering"
-  # }
-
-  destroy {
+  apply {
     manual_confirm = false
     wait_for_run   = true
-    message        = "Destroy: VPC Peering"
+    message        = "Initial apply: VPC Peering"
   }
+
+  # destroy {
+  #   manual_confirm = false
+  #   wait_for_run   = true
+  #   message        = "Destroy: VPC Peering"
+  # }
 }
