@@ -78,7 +78,7 @@ resource "tfe_workspace_run" "be_security" {
   depends_on = [tfe_workspace_run.be_network]
 
   apply {
-    manual_confirm = falose
+    manual_confirm = false
     wait_for_run   = true
     message        = "Initial apply: Backend Security"
   }
